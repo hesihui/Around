@@ -22,7 +22,8 @@ const Header = ({setCoordinates}) => {
     }
 
     const notify = () => {
-        toast("We find several places for you! Check the map to see! ");
+        toast("We find several places based on your location! " +
+            "Check the map to see! ");
     }
     return (
         <AppBar position="static">

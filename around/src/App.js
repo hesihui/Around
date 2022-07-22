@@ -27,13 +27,16 @@ function App() {
         })
     }, []);
 
+    const notify = () => {
+        toast(`We find several places based on ratings value Above
+        ${rating}! Check the map to see! `);
+    }
+
     useEffect(() => {
         const filtered = places.filter((place) => Number(place.rating) > rating);
         setFilteredPlaces(filtered);
+        notify();
     }, [rating]);
-
-
-    const notify = () => toast("Wow so easy !");
 
     useEffect( () => {
         setIsLoading(true);
