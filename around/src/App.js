@@ -6,6 +6,8 @@ import { getPlacesData, getWeatherData } from './api';
 import Header from './components/Header/Header';
 import List from './components/List/List';
 import Map from './components/Map/Map';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     const [places, setPlaces] = useState([]);
@@ -30,6 +32,8 @@ function App() {
         setFilteredPlaces(filtered);
     }, [rating]);
 
+
+    const notify = () => toast("Wow so easy !");
 
     useEffect( () => {
         setIsLoading(true);

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Autocomplete } from "@react-google-maps/api";
-import { AppBar, Toolbar, Typography, InputBase, Box } from "@material-ui/core";
+import {AppBar, Toolbar, Typography, InputBase, Box, Button} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import FastfoodIcon from '@material-ui/icons/Fastfood';
 import useStyles from './styles.js';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Header = ({setCoordinates}) => {
     const classes = useStyles();
@@ -15,8 +18,12 @@ const Header = ({setCoordinates}) => {
         const lat = autocomplete.getPlace().geometry.location.lat();
         const lng = autocomplete.getPlace().geometry.location.lng();
         setCoordinates({ lat, lng});
+        notify();
     }
 
+    const notify = () => {
+        toast("We find several places for you! Check the map to see! ");
+    }
     return (
         <AppBar position="static">
             <Toolbar className={classes.toolbar}>
@@ -36,6 +43,7 @@ const Header = ({setCoordinates}) => {
                                        classes={{ root: classes.inputRoot, input: classes.inputInput }} />
                         </div>
                     </Autocomplete>
+                    <ToastContainer />
                 </Box>
             </Toolbar>
         </AppBar>
