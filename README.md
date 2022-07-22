@@ -3,11 +3,7 @@ Around is a web app that helps you to find the places you want to go! You can si
 
 ##### Some demo pictures:
 
-[![demo1](/Users/sihui/Documents/Github/Around/demo_pic/main_ui.jpg)](https://github.com/hesihui/Around/blob/main/demo_pic/main_ui.jpg)
-
-[![demo2](https://github.com/hesihui/Around/blob/main/demo_pic/main_ui2.jpg?raw=true)]
-
-
+<img src="https://raw.githubusercontent.com/hesihui/Around/main/demo_pic/main_ui2.jpg" >
 
 ##### Map Templates:
 
