@@ -1,7 +1,7 @@
 # Around
 Around is a web app that helps you to find the places you want to go! You can simply get an interactive map with place information from trip advisor by inputting your location, selecting the type of places and your expected rating.
 
-#### Tech Stack: Reactjs with MUI
+#### Tech Stack: Reactjs
 
 #### Some demo pictures:
 
