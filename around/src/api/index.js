@@ -1,19 +1,6 @@
 import axios from 'axios';
 
 const URL = 'https://travel-advisor.p.rapidapi.com/attractions/list-in-boundary'
-const options = {
-    params: {
-        tr_longitude: '109.262909',
-        tr_latitude: '12.346705',
-        bl_longitude: '109.095887',
-        bl_latitude: '12.113245',
-    },
-    headers: {
-        'X-RapidAPI-Key': 'eea778243amsh2f00f061f58d59ep131d40jsn5c9d234811c8',
-        'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
-    }
-};
-
 
 export const getPlacesData = async (type, sw, ne) => {
     try {
